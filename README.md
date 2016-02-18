@@ -19,7 +19,7 @@ Making a more personalized Yelp experience that allows users to save their favor
 
 ##Risks
 
--Breaking one of Yelp's API use guidelines
+-Breaking one of Yelp's API use guidelines (https://www.yelp.com/developers/display_requirements)
 
 -Calling API too many times 
 
