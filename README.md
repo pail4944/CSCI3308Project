@@ -1,5 +1,6 @@
 # Title: CSCI3308Project
 # Members: Parker Illig
+          Daniel Maxson : Boraz
 
 ##Description
 
