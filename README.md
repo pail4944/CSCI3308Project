@@ -3,7 +3,7 @@
           Parker Illig : pail4944
           Daniel Maxson : Boraz
           Andy Rutherford: andrewrutherford
-          Byron Beardenn: bybe2937
+          Byron Bearden: bybe2937
 
 ##Description
 
