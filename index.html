@@ -1,8 +1,29 @@
 <html>
 <head>
-Your Yelp <br>
+<title>Your Yelp</title>
+<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+<script>
+	  $(document).ready(function() {
+	  	console.log("ready")
+	  	$('#search').click(function() {
+	  		console.log("Button clicked!")
+	  		$('#results').text("It worked!" + "  " + $('#city').val() + "  " + $('#reviews').val())
+	  	})
+	  })
+
+  </script>
 </head>
 <body>
 Website under construction. <br>
+<form>
+	Name of city:<br>
+	<input id = "city" type="text" value = "Denver"><br>
+	Min number of reviews:<br>
+	<input id = "reviews" type="text" value = "200"><br>
+</form> 
+
+	<button id = "search"> Search </button>
+	<p id="results"> Results here</p>  
+  
 </body>
 </html>
