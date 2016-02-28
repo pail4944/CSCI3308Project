@@ -4,7 +4,7 @@
           Daniel Maxson : Boraz
           Andy Rutherford: andrewrutherford
           Byron Bearden: bybe2937
-
+	  Griffith Neumark: grne8000
 ##Description
 
 Our goal for this project is to use the Yelp API to provide a richer individual experience through maps, graphs and more personalized approach to recommendations. 
