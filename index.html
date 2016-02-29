@@ -2,12 +2,19 @@
 <head>
 <title>Your Yelp</title>
 <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
+<script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+<script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js"></script>
+<script src="search.js"></script>
 <script>
 	  $(document).ready(function() {
 	  	console.log("ready")
 	  	$('#search').click(function() {
 	  		console.log("Button clicked!")
-	  		$('#results').text("It worked!" + "  " + $('#city').val() + "  " + $('#reviews').val())
+	  		$('#confirm').text("Searching...")
+	  		getsearch($('#city').val(), $('#term').val())
+	  		
 	  	})
 	  })
 
@@ -18,12 +25,14 @@ Website under construction. <br>
 <form>
 	Name of city:<br>
 	<input id = "city" type="text" value = "Denver"><br>
-	Min number of reviews:<br>
-	<input id = "reviews" type="text" value = "200"><br>
+	Term to search for:<br>
+	<input id = "term" type="text" value = "food"><br>
 </form> 
 
 	<button id = "search"> Search </button>
-	<p id="results"> Results here</p>  
+	<p id="confirm"> Confirmation here</p>
+	<p id="results"> Results here </p>
+	<img id="yelplogo"></img>
   
 </body>
 </html>
