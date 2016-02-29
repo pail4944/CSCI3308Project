@@ -1,24 +1,29 @@
 <html>
 <head>
 <title>Your Yelp</title>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script src="search.js"></script>
 <script src="concatstars.js"></script>
-
+<script src="map.js"></script>
+<style>
+	#map { height: 600px;
+			width: 1000px; }
+</style>
 <script>
 	  $(document).ready(function() {
 	  	console.log("ready")
 	  	$('#search').click(function() {
 	  		console.log("Button clicked!")
 	  		$('#confirm').text("Searching...")
-	  		getsearch($('#city').val(), $('#term').val())
+	  		getsearch($('#city').val(), $('#term').val())	
 	  	})
 	  })
-
   </script>
 </head>
 <body>
@@ -30,8 +35,9 @@ Website under construction. <br>
 	<input id = "term" type="text" value = "food"><br>
 </form> 
  	<button id = "search"> Search </button>
-	<p id="confirm"> Confirmation here</p>
-	<p id="results"> Results here </p>
+	<p id="confirm"></p>
+	<div id="map"></div>
+	<p id="results"></p>
 	<img id="yelplogo"></img>
 </body>
 </html>

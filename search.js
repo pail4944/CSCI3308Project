@@ -46,15 +46,14 @@ function getsearch(city, term){
         'jsonpCallback' : 'cb',
         'success' : function(data, textStats, XMLHttpRequest) {
             $('#confirm').text("It worked!" + " Searched for " + $('#city').val() + "  " + $('#term').val())
-            console.log(data)
             var str = "Results: " + "<br>"
-            _.forEach(data.businesses, function(d){
-                
+            _.forEach(data.businesses, function(d){  
                 str += ("Name: " + d.name + "<br>" + "Address: " + d.location.address + "<br>" + "Rating: " + getstar(d.rating) + "<br><br><br>") 
             })
             document.getElementById("results").innerHTML = str
             document.getElementById("yelplogo").src = "assets/yelp-logo-large.png"
+            console.log(data)
+            var map = createmap('map', [data.region.center.latitude, data.region.center.longitude], 12, data)
         }
     })
-
 }
