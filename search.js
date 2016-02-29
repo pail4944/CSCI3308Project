@@ -48,13 +48,13 @@ function getsearch(city, term){
             $('#confirm').text("It worked!" + " Searched for " + $('#city').val() + "  " + $('#term').val())
             console.log(data)
             var str = "Results: " + "<br>"
-            
             _.forEach(data.businesses, function(d){
-                str += ("Name: " + d.name + "<br>" + "Address: " + d.location.address + "<br>" + "Rating: " + d.rating + "<br><br><br>") 
+                
+                str += ("Name: " + d.name + "<br>" + "Address: " + d.location.address + "<br>" + "Rating: " + getstar(d.rating) + "<br><br><br>") 
             })
             document.getElementById("results").innerHTML = str
-            document.getElementById("yelplogo").src = "https://s3-media2.fl.yelpcdn.com/assets/srv0/developer_pages/5cb298e8a186/assets/img/yelp-logo-xsmall@2x.png"
+            document.getElementById("yelplogo").src = "assets/yelp-logo-large.png"
         }
-    });
+    })
 
 }
