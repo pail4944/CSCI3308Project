@@ -7,6 +7,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js"></script>
 <script src="search.js"></script>
+
 <script>
 	  $(document).ready(function() {
 	  	console.log("ready")
@@ -15,6 +16,7 @@
 	  		$('#confirm').text("Searching...")
 	  		getsearch($('#city').val(), $('#term').val())
 	  		
+	  		$('#results').text("It worked!" + "  " + $('#city').val() + "  " + $('#reviews').val())
 	  	})
 	  })
 
@@ -33,6 +35,12 @@ Website under construction. <br>
 	<p id="confirm"> Confirmation here</p>
 	<p id="results"> Results here </p>
 	<img id="yelplogo"></img>
+	Min number of reviews:<br>
+	<input id = "reviews" type="text" value = "200"><br>
+</form> 
+
+	<button id = "search"> Search </button>
+	<p id="results"> Results here</p>  
   
 </body>
 </html>
