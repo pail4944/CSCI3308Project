@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>Your Yelp</title>
+<link rel="stylesheet" type="text/css" href="screen.css">
 
 <meta name="DC.title" content="Title here" />
 <meta name="DC.subject" content="Keywords here" />
@@ -19,7 +20,7 @@
 <script src="concatstars.js"></script>
 <script src="map.js"></script>
 <style>
-	#map { height: 600px;
+	#map { height: 1000px;
 			width: 1000px; }
 </style>
 <script>
@@ -37,6 +38,11 @@
 <h1>Your Yelp</h1> <br>
 <h5><i>Under Construction</i></h5><br>
 <!-- User creation -->
+
+
+<br><br>
+
+
 
 <table id="maintable">
 	<tr>
@@ -64,18 +70,21 @@
 		</td>
 		<td> 	
 			<button id = "search">&nbsp Search &nbsp</button>
-
 		</td>
 	</tr>		
-</table>
-<br><br>
-			<p id="confirm"></p>
-			<div id="map"></div>
-			<p id="results"></p>
-			<img id="yelplogo"></img>
+</table><br>
 </body>
-<span id="result"></span>
-
-
-
+<p id="confirm"></p>
+<table align = "center">
+	<tr>
+		<td>
+			<div id="map"></div>
+		</td>
+		<td>
+			<p id="results"></p>
+		</td>
+	</tr>
+</table>
+<img id="yelplogo"></img>
+<center><span id="result"></span></center>
 </html>
