@@ -27,8 +27,9 @@ version history: [location of file]
 	margin: 0;
 	padding: 0;
 	
-	
 }
+
+
 
 
 /* Styles for layout
@@ -168,11 +169,23 @@ table
 	border-collapse: collapse;
 }
 
-td 
+th, td 
 	
 	{
-  	text-align: left;
+
 	font-weight: normal;
+	padding: 10px;
+}
+
+input[type="text"] {
+	width: 150px;
+
+}
+
+table#maintable {
+	width: 46%;
+	margin-left: 27%;
+	margin-right: 27%;
 }
 
 
