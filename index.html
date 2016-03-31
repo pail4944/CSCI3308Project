@@ -1,7 +1,15 @@
 <html>
 <head>
 <title>Your Yelp</title>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<link rel="stylesheet" type="text/css" href="screen.css">
+
+<meta name="DC.title" content="Title here" />
+<meta name="DC.subject" content="Keywords here" />
+<meta name="DC.description" content="Description here" />
+<meta name="DC.format" content="text/html" />
+<meta name="DC.publisher" content="Publisher here" />
+<meta name="DC.language" content="en" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
@@ -12,7 +20,7 @@
 <script src="concatstars.js"></script>
 <script src="map.js"></script>
 <style>
-	#map { height: 600px;
+	#map { height: 1000px;
 			width: 1000px; }
 </style>
 <script>
@@ -27,26 +35,56 @@
   </script>
 </head>
 <body>
-Website under construction. <br>
+<h1>Your Yelp</h1> <br>
+<h5><i>Under Construction</i></h5><br>
 <!-- User creation -->
-<form id="addUsr" action="" method="post">
-	Username:<br>
-	<input id="usrId" type="text"><br>
-	Email:<br>
-	<input id="email" type="text"><br>
-	<button id="sub">Save</button>
-<form>
 
-	Name of city:<br>
-	<input id = "city" type="text" value = "Denver"><br>
-	Term to search for:<br>
-	<input id = "term" type="text" value = "food"><br>
-</form> 
- 	<button id = "search"> Search </button>
-	<p id="confirm"></p>
-	<div id="map"></div>
-	<p id="results"></p>
-	<img id="yelplogo"></img>
+
+<br><br>
+
+
+
+<table id="maintable">
+	<tr>
+		<td>Username:</td>
+		<td align="center">
+			<form id="addUsr" action="" method="post">	
+			<input id="usrId" type="text">
+		</td>
+		<td>
+			<button id="sub">&nbsp Save &nbsp</button> 
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td>City:</td>
+		<td align="center">
+			<input id = "city" type="text" value = "Denver">
+		</td>
+		<td>&nbsp</td>
+	</tr>
+	<tr>
+		<td>Looking for:</td>
+		<td align="center">
+			<input id = "term" type="text" value = "food">
+		</td>
+		<td> 	
+			<button id = "search">&nbsp Search &nbsp</button>
+		</td>
+	</tr>		
+</table><br>
 </body>
-<span id="result"></span>
+<p id="confirm"></p>
+<table align = "center">
+	<tr>
+		<td>
+			<div id="map"></div>
+		</td>
+		<td>
+			<p id="results"></p>
+		</td>
+	</tr>
+</table>
+<img id="yelplogo"></img>
+<center><span id="result"></span></center>
 </html>
