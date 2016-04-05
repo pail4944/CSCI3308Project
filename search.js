@@ -1,10 +1,17 @@
+function getkeys(city, term){
+    var DB = new Firebase('luminous-heat-9947.firebaseIO.com');
+    DB.on("value", function(snapshot){
+        key_data = snapshot.val()
+        getsearch(key_data, city, term)
+    })
+}
 
-function getsearch(city, term){
+function getsearch(key_data, city, term){
     var auth = {
-        consumerKey : "UoGBVX22_FMoL5fHbUbGhw",
-        consumerSecret : "DokjouooPd4zppGDrfPLOwqEaMc",
-        accessToken : "S0OwEEVViv59ZDTByVx-wjAsm5CrRL7u",
-        accessTokenSecret : "a1BEN4Qqxwil8gxw4OPMEEpSjrM",
+        consumerKey : key_data.key.ConsKey,
+        consumerSecret : key_data.key.ConsSecret,
+        accessToken : key_data.key.AccessToken,
+        accessTokenSecret : key_data.key.AccessSecret,
         serviceProvider : {
             signatureMethod : "HMAC-SHA1"
         }
@@ -37,7 +44,6 @@ function getsearch(city, term){
     OAuth.SignatureMethod.sign(message, accessor);
 
     var parameterMap = OAuth.getParameterMap(message.parameters);
-    console.log(parameterMap);
 
     $.ajax({
         'url' : message.action,
