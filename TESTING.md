@@ -7,8 +7,9 @@ Vision: "Helping you go where you wanna go"
 Automated Tests: 
 We mainly test two of our javascript functions - getstars and getkeys
 We test getstars in two ways - we make sure the functions returns:
-	*The correct possible image combinations correct image string for 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5
-	*None if it is not one of the previous numbers
+* The correct possible image combinations correct image string for 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5
+* None if it is not one of the previous numbers
+
 We test getkey by making sure the keys are getting returned from the firebase database. This is given a 5 second runtime. If this test fails, it's likely caused by the connection to firebase taking more than 5 seconds. 
 
 All the code for the tests can be found inside tests.js on our GitHub and the tests can be run by visiting http://pail4944.github.io/CSCI3308Project/testing.html
