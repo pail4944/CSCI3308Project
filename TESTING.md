@@ -51,7 +51,7 @@ User Acceptence Tests:
 | Use Case Name:    | Navigate Map  |
 | Description:      | Move through the map |
 | Users:            | Users of the site |
-| Preconditions:    | CConnected to the internet, API must return results, map must be loaded |
+| Preconditions:    | Connected to the internet, API must return results, map must be loaded |
 | Postconditions:   | Map view has changed in some way |
 | Frequency of Use: | Daily by users |
 | Flow of Events:   |   1. Perform a search (see YY-1) |
