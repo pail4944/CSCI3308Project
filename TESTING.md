@@ -60,3 +60,21 @@ User Acceptence Tests:
 |                   |   4. Move mouse in a direction to move map in opposite direction |
 | Test Pass?        |   |
 | Notes and Issues: |   |
+
+----------------------------------------------------------
+
+|                   |   |
+|-------------------|---|
+| Use Case ID:      | YY-4 |
+| Use Case Name:    | Refresh Search  |
+| Description:      | Complete a search after a succesfull search |
+| Users:            | Users of the site |
+| Preconditions:    | Connected to the internet, API must return results, map must be loaded |
+| Postconditions:   | Map shows correct relocation and results |
+| Frequency of Use: | Daily by users |
+| Flow of Events:   |   1. Perform a search (see YY-1) |
+|                   |   2. Type in a different city or location in search bar |
+|                   |   3. Click search again |
+|                   |   |
+| Test Pass?        |   |
+| Notes and Issues: |   |
