@@ -1,19 +1,27 @@
 <html>
 <head>
 <title>Your Yelp</title>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<link rel="stylesheet" type="text/css" href="screen.css">
+
+<meta name="DC.title" content="Title here" />
+<meta name="DC.subject" content="Keywords here" />
+<meta name="DC.description" content="Description here" />
+<meta name="DC.format" content="text/html" />
+<meta name="DC.publisher" content="Publisher here" />
+<meta name="DC.language" content="en" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 <script src="http://pail4944.github.io/CSCI3308Project/search.js"></script>
 <script src="http://pail4944.github.io/CSCI3308Project/concatstars.js"></script>
 <script src="http://pail4944.github.io/CSCI3308Project/map.js"></script>
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-
 <style>
-	#map { height: 600px;
+	#map { height: 2300px;   
 			width: 1000px; }
 </style>
 <script>
@@ -22,23 +30,63 @@
 	  	$('#search').click(function() {
 	  		console.log("Button clicked!")
 	  		$('#confirm').text("Searching...")
-	  		getsearch($('#city').val(), $('#term').val())	
+	  		getkeys($('#city').val(), $('#term').val())
 	  	})
 	  })
   </script>
 </head>
 <body>
-Website under construction. <br>
-<form>
-	Name of city:<br>
-	<input id = "city" type="text" value = "Denver"><br>
-	Term to search for:<br>
-	<input id = "term" type="text" value = "food"><br>
-</form> 
- 	<button id = "search"> Search </button>
-	<p id="confirm"></p>
-	<div id="map"></div>
-	<p id="results"></p>
-	<img id="yelplogo"></img>
+<h1>Your Yelp</h1> <br>
+<h5><i>Under Construction</i></h5><br>
+<!-- User creation -->
+
+
+<br><br>
+
+
+<center>
+<table id="maintable">
+	<tr>
+		<td>Username:</td>
+		<td align="center">
+			<form id="addUsr" action="" method="post">	
+			<input id="usrId" type="text">
+		</td>
+		<td>
+			<button id="sub">&nbsp Save &nbsp</button> 
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td>City:</td>
+		<td align="center">
+			<input id = "city" type="text" value = "Denver">
+		</td>
+		<td>&nbsp</td>
+	</tr>
+	<tr>
+		<td>Looking for:</td>
+		<td align="center">
+			<input id = "term" type="text" value = "food">
+		</td>
+		<td> 	
+			<button id = "search">&nbsp Search &nbsp</button>
+		</td>
+	</tr>		
+</table></center><br>
 </body>
+<p id="confirm"></p>
+<center>
+<table>
+	<tr>
+		<td>
+			<div id="map"></div>
+		</td>
+		<td>
+			<p id="results"></p>
+		</td>
+	</tr>
+</table>
+<img id="yelplogo"></img>
+<center><span id="result"></span></center>
 </html>
