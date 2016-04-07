@@ -1,8 +1,11 @@
-function getkeys(city, term){
+function getkeys(city, term, test){
     var DB = new Firebase('luminous-heat-9947.firebaseIO.com');
     DB.on("value", function(snapshot){
         key_data = snapshot.val()
-        getsearch(key_data, city, term)
+        $('#keys').data(key_data)
+        if (!test){
+            getsearch(key_data, city, term)
+        }
     })
 }
 
