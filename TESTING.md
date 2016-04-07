@@ -1,10 +1,10 @@
-#Names: Parker Illig, Daniel Maxson, Andrew Rutherfeld, Byron Bearden, Griffith Neumark
+###Names: Parker Illig, Daniel Maxson, Andrew Rutherfeld, Byron Bearden, Griffith Neumark
 
-#Title: Your Yelp
+###Title: Your Yelp
 
-#Vision: "Helping you go where you wanna go"
+###Vision: "Helping you go where you wanna go"
 
-#Automated Tests: 
+##Automated Tests: 
 
 We mainly test two of our javascript functions - getstars and getkeys.
 
@@ -17,7 +17,7 @@ We test getkey by making sure the keys are getting returned from the firebase da
 All the code for the tests can be found inside tests.js on our GitHub and the tests can be run by visiting http://pail4944.github.io/CSCI3308Project/testing.html
 
 
-#User Acceptence Tests:
+##User Acceptence Tests:
 
 |                   |   |
 |-------------------|---|
