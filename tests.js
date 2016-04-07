@@ -26,4 +26,4 @@ window.setTimeout( function(){
         assert.equal(new RegExp('^S0Ow').test($("#keys").data().key.AccessToken), true, "got access token");
         assert.equal(new RegExp('^a1BE').test($("#keys").data().key.AccessSecret), true, "got secret access token");
     });
-}, 1500)
+}, 5000)
