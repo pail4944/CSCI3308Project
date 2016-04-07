@@ -67,7 +67,7 @@ User Acceptence Tests:
 |-------------------|---|
 | Use Case ID:      | YY-4 |
 | Use Case Name:    | Refresh Search  |
-| Description:      | Complete a search after a succesfull search |
+| Description:      | Complete a search after a succesful search |
 | Users:            | Users of the site |
 | Preconditions:    | Connected to the internet, API must return results, map must be loaded |
 | Postconditions:   | Map shows correct relocation and results |
