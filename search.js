@@ -60,6 +60,9 @@ function getsearch(key_data, city, term){
             document.getElementById("yelplogo").src = "assets/yelp-logo-large.png"
             console.log(data)
             var map = createmap('map', [data.region.center.latitude, data.region.center.longitude], 12, data)
+            $('#search').click(function() {
+                map.remove()
+            })
         }
     })
 }

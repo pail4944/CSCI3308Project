@@ -6,6 +6,7 @@ Vision: "Helping you go where you wanna go"
 
 Automated Tests: 
 
+http://pail4944.github.io/CSCI3308Project/testing.html
 
 User Acceptence Tests:
 ----------------------------------------------------------
