@@ -1,18 +1,35 @@
 <html>
 <head>
 <title>Your Yelp</title>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<link rel="stylesheet" type="text/css" href="screen.css">
+
+<meta name="DC.title" content="Title here" />
+<meta name="DC.subject" content="Keywords here" />
+<meta name="DC.description" content="Description here" />
+<meta name="DC.format" content="text/html" />
+<meta name="DC.publisher" content="Publisher here" />
+<meta name="DC.language" content="en" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <script src="http://code.jquery.com/jquery-2.2.0.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
 <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js"></script>
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 <script src="search.js"></script>
 <script src="concatstars.js"></script>
 <script src="map.js"></script>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<!--Import Google Icon Font-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 <style>
-	#map { height: 600px;
+	#map { height: 900px;   
 			width: 1000px; }
 </style>
 <script>
@@ -21,30 +38,70 @@
 	  	$('#search').click(function() {
 	  		console.log("Button clicked!")
 	  		$('#confirm').text("Searching...")
-	  		getsearch($('#city').val(), $('#term').val())	
+	  		getkeys($('#city').val(), $('#term').val(), false)
 	  	})
 	  })
   </script>
 </head>
 <body>
-Website under construction. <br>
-<!-- User creation -->
-<form id="addUsr" action="" method="post">
-	Username:<input id="usrId" type="text" /><br />
-	Email:<input id="email" type="text" /><br />
-	<button id="sub">Save</button>
-<form>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
 
-	Name of city:<br>
-	<input id = "city" type="text" value = "Denver"><br>
-	Term to search for:<br>
-	<input id = "term" type="text" value = "food"><br>
-</form> 
- 	<button id = "search"> Search </button>
-	<p id="confirm"></p>
-	<div id="map"></div>
-	<p id="results"></p>
-	<img id="yelplogo"></img>
+<div class="container">
+<h1>Your Yelp</h1>
+<h5><i>Under Construction</i></h5>
+<!-- User creation -->
+
+
+
+<table id="maintable">
+	<tr>
+		<a href="index2.html">About</a>
+		<td>Username:</td>
+		<td align="center">
+			<form id="addUsr" action="" method="post">	
+			<input id="usrId" type="text">
+		</td>
+		<td>
+			<a id="sub" class="waves-effect waves-light btn red">Save</a>
+			<!-- <button id="sub">&nbsp Save &nbsp</button> -->
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td>City:</td>
+		<td align="center">
+			<input id = "city" type="text" value = "Denver">
+		</td>
+		<td>&nbsp</td>
+	</tr>
+	<tr>
+		<td>Looking for:</td>
+		<td align="center">
+			<input id = "term" type="text" value = "food">
+		</td>
+		<td>
+			<a id="search" class="waves-effect waves-light btn red">Search</a>
+			<!-- <button id = "search">&nbsp Search &nbsp</button> -->
+		</td>
+	</tr>		
+</table><br>
+</div>
 </body>
-<span id="result"></span>
+<p id="confirm"></p>
+<center>
+<table>
+	<tr>
+		<td>
+			<div id="map"></div>
+		</td>
+		<td>
+			<p id="results"></p>
+		</td>
+	</tr>
+</table>
+<img id="yelplogo"></img>
+<center><span id="result"></span></center>
 </html>
+>>>>>>> 5bfe6863de2beafb33ba253cbddd43a0c2a24157
