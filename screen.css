@@ -60,7 +60,7 @@ version history: [location of file]
 body
 	{
 	background: url(/images/background.png) repeat;
-	background-color: #FFA2A2;
+	background-color: #bdbdbd; /* Title surround color */
 	color: #000000;	
 	text-align:center;
 }
@@ -175,7 +175,7 @@ table
   	border-spacing: 0;
 	border-collapse: collapse;
 	border: 1px solid black;
-	background-color: #FF8B8B; /* Can we change this color? imo gross */
+	background-color: #f44336; /*Form background color*/
 
 
 }
