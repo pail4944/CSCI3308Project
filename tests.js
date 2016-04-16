@@ -13,13 +13,8 @@ QUnit.test("getstar should return correct sequence of images", function( assert 
 });
  
 QUnit.test("getstar should return None for bad ratings", function( assert ) {
-<<<<<<< HEAD
-    assert.equal( getstar(-1), "None", "Negative rating gave None");
-    assert.equal( getstar(6), "None" , "Positive out of bounds number gave None");
-=======
   	assert.equal( getstar(-1), "None", "Negative rating gave None");
   	assert.equal( getstar(6), "None" , "Positive out of bounds number gave None");
->>>>>>> google-oauth
     assert.equal( getstar(4.5000000001), "None", "Floating point in range but not exactly one of the 11 possible ratings gave None");
 });
 
