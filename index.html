@@ -25,11 +25,12 @@
 <!--Import Google Icon Font-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--Import materialize.css-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
-<!--Import materialize.css-->
 <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
 <style>
 	#map { height: 900px;   
 			width: 1000px; }
@@ -48,21 +49,21 @@
 </head>
 <body>
 	<!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+      <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.min.js"></script>
+
 
 <div class="container">
 <h1>Your Yelp</h1>
 <h5><i>Under Construction</i></h5>
-<div class="right g-signin2" data-onsuccess="onSignIn"><a id="Googlesignin" class="waves-effect waves-light btn red accent-4">Sign in</a>
-<!-- google sign in oauth2 -->
-<a href="#" onclick="signOut();">Sign out</a>
-</div>
 <!-- User creation -->
-
+<div class="row">
+<div class="z-depth-2 col m10">
 <table id="maintable">
 	<tr>
-		<a href="index2.html" class="waves-effect waves-light btn red accent-4">About</a>
 		<td>Username:</td>
 		<td align="center">
 			<form id="addUsr" action="" method="post">	
@@ -92,7 +93,20 @@
 			<!-- <button id = "search">&nbsp Search &nbsp</button> -->
 		</td>
 	</tr>		
-</table><br>
+</table>
+</div>
+<br>
+
+<div class="right g-signin2 col m2" data-onsuccess="onSignIn"><a id="Googlesignin" class="waves-effect waves-light btn red accent-4">Sign in</a>
+<!-- google sign in oauth2 -->
+<a href="#" onclick="signOut();">Sign out</a>
+<br>
+<br>
+<br>
+<br>
+<a href="index2.html" class="waves-effect waves-light btn red accent-4">About</a>
+</div>
+</div>
 </div>
 
 <script>
