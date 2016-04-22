@@ -1,91 +1,119 @@
 <html>
 <head>
-<title>Your Yelp</title>
-<!-- <link rel="stylesheet" type="text/css" href="screen.css"> -->
 
-<meta name="DC.title" content="Title here" />
-<meta name="DC.subject" content="Keywords here" />
-<meta name="DC.description" content="Description here" />
-<meta name="DC.format" content="text/html" />
-<meta name="DC.publisher" content="Publisher here" />
-<meta name="DC.language" content="en" />
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
-<script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
-<script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js"></script>
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-<script src="search.js"></script>
-<script src="concatstars.js"></script>
-<script src="map.js"></script>
+  <title>Your Yelp</title>
+  <!-- <link rel="stylesheet" type="text/css" href="screen.css"> -->
+  <meta name="DC.title" content="Title here" />
+  <meta name="DC.subject" content="Keywords here" />
+  <meta name="DC.description" content="Description here" />
+  <meta name="DC.format" content="text/html" />
+  <meta name="DC.publisher" content="Publisher here" />
+  <meta name="DC.language" content="en" />
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 
-<!--Import Google Icon Font-->
-<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src="http://code.jquery.com/jquery-2.2.0.js" type="text/javascript"></script>
+  <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js" type="text/javascript"></script>
+  <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js" type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js" type="text/javascript"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js" type="text/javascript"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js' type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+  <script src="concatstars.js" type="text/javascript"></script>
+  <script src="map.js" type="text/javascript"></script>
 
-<script>
-	  $(document).ready(function() {
-	  	console.log("ready")
-	  	$('#search').click(function() {
-	  		console.log("Button clicked!")
-	  		$('#confirm').text("Searching...")
-	  		getkeys($('#city').val(), $('#term').val())
-	  	})
-	  })
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" type="text/css" /><!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" type="text/css" />
+
+  <script type="text/javascript">
+//<![CDATA[
+          $(document).ready(function() {
+                console.log("ready")
+                $('#search').click(function() {
+                        console.log("Button clicked!")
+                        $('#confirm').text("Searching...")
+                        getkeys($('#city').val(), $('#term').val())
+                })
+          })
+  //]]>
   </script>
 </head>
+
 <body>
+  <nav>
+    <div class="nav-wrapper red darken-4">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="index2.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<h1>Your Yelp</h1> <br>
-<h5><i>Under Construction</i></h5><br>
-<!-- User creation -->
+  <div class="container">
+  <div class="center">
+    <h1>Your Yelp</h1><br />
 
+    <h5><i>Under Construction</i></h5><br />
+    <!-- User creation -->
+    <br />
+    <br />
+  </div>
 
-<br><br>
+    <div class="row" id="maintable">
+      <form class="card-panel col s6 offset-s3 grey lighten-2" id="addUsr" action="" method="post">
+      <br />
+        <div class="row">
+          <div class="col s2 left">
+            <br />
+            Username:
+          </div>
 
+          <div class="input-field col s7">
+            <input id="usrId" type="text" class="validate" />
+          </div>
 
+          <div class="col s3 right">
+            <a id="sub" class="waves-effect waves-light btn red accent-4" name=
+            "sub">Save</a>
+          </div>
+        </div>
 
-<table id="maintable">
-	<tr>
-		<td>Username:</td>
-		<td align="center">
-			<form id="addUsr" action="" method="post">	
-			<input id="usrId" type="text">
-		</td>
-		<td>
-			<a id="sub" class="waves-effect waves-light btn red accent-4">Save</a>
-			</form>
-		</td>
-	</tr>
-	<tr>
-		<td>City:</td>
-		<td align="center">
-			<input id = "city" type="text" value = "Denver">
-		</td>
-		<td>&nbsp</td>
-	</tr>
-	<tr>
-		<td>Looking for:</td>
-		<td align="center">
-			<input id = "term" type="text" value = "food">
-		</td>
-		<td> 	
-			<a id="search" class="waves-effect waves-light btn red accent-4">Search</a>
-		</td>
-	</tr>		
-</table><br>
-<p id="confirm"></p>
-<div class="container">
-<div class="row">
-      <div class="col s6" id="map" style="height:600px; width:800px;"></div>
-      <div class="col s6" id="result"><p id="results"></p></div>
-    <img id="yelplogo"></img>
-</div>
-</div>
+        <div class="row">
+          <div class="col s2 left">
+            <br />
+            City:
+          </div>
 
+          <div class="input-field col s7">
+            <input id="city" type="text" value="Denver" class="validate" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s2 left">
+            <br />
+            Looking for:
+          </div>
+
+          <div class="input-field col s7">
+            <input id="term" type="text" value="food" class="validate" />
+          </div>
+
+          <div class="col s3 right">
+            <a id="search" class="waves-effect waves-light btn red accent-4" name=
+            "search">Search</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="row">
+    <p id="confirm"></p>
+
+    <div class="col s5 m5" id="map" style="height:800px; width:700px;"></div>
+
+    <p id="results"></p>
+
+    <div class="col s5 m5" id="result"></div><img id="yelplogo" /></div>
+  </div>
 </body>
 </html>
