@@ -1,159 +1,117 @@
 <html>
-
 <head>
 
-<title>Your Yelp</title>
+  <title>Your Yelp</title>
+  <!-- <link rel="stylesheet" type="text/css" href="screen.css"> -->
+  <meta name="DC.title" content="Title here" />
+  <meta name="DC.subject" content="Keywords here" />
+  <meta name="DC.description" content="Description here" />
+  <meta name="DC.format" content="text/html" />
+  <meta name="DC.publisher" content="Publisher here" />
+  <meta name="DC.language" content="en" />
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
 
-<link rel="stylesheet" type="text/css" href="screen.css">
-<meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="344877425136-avkk6s4bnk2jn4l4rif3kq30q28m10f3.apps.googleusercontent.com">
-<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-<meta name="DC.title" content="Title here" />
-<meta name="DC.subject" content="Keywords here" />
-<meta name="DC.description" content="Description here" />
-<meta name="DC.format" content="text/html" />
-<meta name="DC.publisher" content="Publisher here" />
-<meta name="DC.language" content="en" />
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
-<script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
-<script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js"></script>
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-<script src="search.js"></script>
-<script src="concatstars.js"></script>
-<script src="map.js"></script>
+  <script src="http://code.jquery.com/jquery-2.2.0.js" type="text/javascript"></script>
+  <script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js" type="text/javascript"></script>
+  <script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js" type="text/javascript"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js" type="text/javascript"></script>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js" type="text/javascript"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js' type="text/javascript"></script>
+  <script src="search.js" type="text/javascript"></script>
+  <script src="concatstars.js" type="text/javascript"></script>
+  <script src="map.js" type="text/javascript"></script>
 
-<script src="http://code.jquery.com/jquery-2.2.0.js"></script>
-<script src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
-<script src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/lodash/4.5.1/lodash.min.js"></script>
-<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" type="text/css" /><!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" type="text/css" />
 
-<!--Import Google Icon Font-->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-
-<style>
-	#map { height: 1000px;   
-			width: 1000px; }
-</style>
-<script>
-	  $(document).ready(function() {
-	  	console.log("ready")
-	  	$('#search').click(function() {
-	  		console.log("Button clicked!")
-	  		$('#confirm').text("Searching...")
-	  		getsearch($('#city').val(), $('#term').val())	
-	  	})
-	  })
+  <script type="text/javascript">
+//<![CDATA[
+          $(document).ready(function() {
+                console.log("ready")
+                $('#search').click(function() {
+                        console.log("Button clicked!")
+                        $('#confirm').text("Searching...")
+                        getkeys($('#city').val(), $('#term').val())
+                })
+          })
+  //]]>
   </script>
 </head>
 
 <body>
-	<!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-      <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.0.0/lodash.min.js"></script>
+  <nav>
+    <div class="nav-wrapper red darken-4">
+      <ul class="right hide-on-med-and-down">
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<nav>
-  <div class="nav-wrapper red darken-4">
-    <ul class="right hide-on-med-and-down">
-      <li><a class="g-signin2" data-onsuccess="onSignIn">Google Sign In</a></li>
-      <li><a href="index2.html">About</a></li>
-    </ul>
+  <div class="container">
+  <div class="center">
+    <h1>Your Yelp</h1><br />
+
+    <h5><i>Under Construction</i></h5><br />
+    <!-- User creation -->
+    <br />
+    <br />
   </div>
-</nav>
 
-<div class="container">
-<h1>Your Yelp</h1>
-<h5><i>Under Construction</i></h5>
-<!-- User creation -->
+    <div class="row" id="maintable">
+      <form class="card-panel col s6 offset-s3 grey lighten-2" id="addUsr" action="" method="post">
+      <br />
+        <div class="row">
+          <div class="col s2 left">
+            <br />
+            Username:
+          </div>
 
-<div class="row">
-    <form class="col s12">
-      <div class="row">
-      
-        <div class="input-field col s7 offset-m2">
-          <i class="material-icons white6 prefix">perm_identity</i>
-          <form id="addUsr" action="" method="post">
-          <input id="usrId" type="text" class="validate">
-          <label for="icon_prefix2">Username:</label>
-          <button id="sub" class="right waves-effect waves-red btn red darken-4">Save</button>
-          <!--<button id="sub">&nbsp Save &nbsp</button> -->
+          <div class="input-field col s7">
+            <input id="usrId" type="text" class="validate" />
+          </div>
+
+          <div class="col s3 right">
+            <a id="sub" class="waves-effect waves-light btn red accent-4" name="sub">Save</a>
+          </div>
         </div>
 
-        <div class="input-field col s7 offset-m2">
-          <i class="material-icons white6 prefix">location_city</i>
-          <input id="city" type="text" value="Denver">
-          <label for="icon_prefix2">City:</label>
+        <div class="row">
+          <div class="col s2 left">
+            <br />
+            City:
+          </div>
+
+          <div class="input-field col s7">
+            <input id="city" type="text" value="Denver" class="validate" />
+          </div>
         </div>
 
-        <div class="input-field col s7 offset-m2">
-          <i class="material-icons white6 prefix">search</i>
-          <input id="term" type="text" value="food">
-          <label for="icon_prefix2">Looking for:</label>
-          <button id="search" class="waves-effect waves-red btn-large red darken-4"><i class="material-icons right">&nbsp search </i>Search</button>
-          <!-- <button id = "search">&nbsp Search &nbsp</button> -->
-        </div>
+        <div class="row">
+          <div class="col s2 left">
+            <br />
+            Looking for:
+          </div>
 
-      </div>
-	</form>
+          <div class="input-field col s7">
+            <input id="term" type="text" value="food" class="validate" />
+          </div>
+
+          <div class="col s3 right">
+            <a id="search" class="waves-effect waves-light btn red accent-4" name="search">Search</a>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="row">
+    <p id="confirm"></p>
+
+    <div class="col s5 m5" id="map" style="height:800px; width:700px;"></div>
+
+    <p id="results"></p>
+
+    <div class="col s5 m5" id="result"></div><img id="yelplogo" /></div>
   </div>
-</div>
-
 </body>
-<p id="confirm"></p>
-<center>
-<table>
-	<tr>
-		<td>
-			<div id="map"></div>
-		</td>
-		<td>
-			<p id="results"></p>
-		</td>
-	</tr>
-</table>
-<img id="yelplogo"></img>
-<center><span id="result"></span></center>
-
-<script>
-  function onSuccess(googleUser) {
-    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-  }
-  function onFailure(error) {
-    console.log(error);
-  }
-  function renderButton() {
-    gapi.signin2.render('my-signin2', {
-      'scope': 'profile email',
-      'width': 240,
-      'height': 50,
-      'longtitle': true,
-      'theme': 'dark',
-      'onsuccess': onSuccess,
-      'onfailure': onFailure
-    });
-  }
-</script>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
 </html>

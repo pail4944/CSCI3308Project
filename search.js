@@ -2,8 +2,10 @@ function getkeys(city, term, test){
     var DB = new Firebase('luminous-heat-9947.firebaseIO.com');
     DB.on("value", function (snapshot){
         key_data = snapshot.val()
+        console.log(key_data)
         $('#keys').data(key_data)
         if (!test){
+            console.log("getting search")
             getsearch(key_data, city, term)
         }
     })  
@@ -47,7 +49,7 @@ function getsearch(key_data, city, term){
     OAuth.SignatureMethod.sign(message, accessor);
 
     var parameterMap = OAuth.getParameterMap(message.parameters);
-
+    console.log()
     $.ajax({
         'url' : message.action,
         'data' : parameterMap,
