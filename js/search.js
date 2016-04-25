@@ -1,8 +1,16 @@
+
+/**
+ * Grabs keys from firebase database and stores keys. Calls getsearch when keys are received.
+ *@example 
+ *getkeys('denver', 'food', false)
+ *@param {string} city - city to be searched on Yelp
+ *@param {string} term - term to be searched on Yelp 
+ *@param {boolean} test - determines whether we search or not
+ */
 function getkeys(city, term, test){
     var DB = new Firebase('luminous-heat-9947.firebaseIO.com');
     DB.on("value", function (snapshot){
         key_data = snapshot.val()
-        console.log(key_data)
         $('#keys').data(key_data)
         if (!test){
             console.log("getting search")
@@ -11,6 +19,15 @@ function getkeys(city, term, test){
     })  
 }
 
+/**
+ * Queries Yelp API with 4 keys from getkeys.
+ * Once gotten, writes out all businesses in results element and calls createmap
+ *@example
+ *getsearch(Object, 'denver', 'food')
+ *@param {Object} key_data - 4 authetication keys needed to access Yelp API
+ *@param {string} city - city to be searched on Yelp
+ *@param {string} term - term to be searched on Yelp 
+ */
 function getsearch(key_data, city, term){
     var auth = {
         consumerKey : key_data.key.ConsKey,
