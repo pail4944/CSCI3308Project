@@ -30,8 +30,6 @@ version history: [location of file]
 }
 
 
-
-
 /* Styles for layout
 -----------------------------------------------------------------------------*/
 
@@ -60,7 +58,7 @@ version history: [location of file]
 body
 	{
 	background: url(/images/background.png) repeat;
-	background-color: #FFA2A2;
+	background-color: #bdbdbd; /* Title surround color */
 	color: #000000;	
 	text-align:center;
 }
@@ -128,7 +126,7 @@ li, dd, dt
 
 /* Navigation
 -----------------------------------------------------------------------------*/
-
+/* defined in the div for now */
 
 
 /* Footer
@@ -175,7 +173,7 @@ table
   	border-spacing: 0;
 	border-collapse: collapse;
 	border: 1px solid black;
-	background-color: #FF8B8B;
+	background-color: #f44336; /*Form background color*/
 
 
 }
@@ -194,13 +192,6 @@ input[type="text"] {
 	width: 150px;
 
 }
-
-table#maintable {
-
-	margin-left: 27%;
-	margin-right: 27%;
-}
-
 
 /* required styles */
 
@@ -682,15 +673,50 @@ table#maintable {
 	border: 1px solid #666;
 	}
 
+/* Materialize colors */
 
+.input-field input[type=text],
+.input-field input[type=email] {
+  border: none;
+  border-bottom: 1px solid white;
+  box-shadow: 0 1px 0 0 white;
+}
 
+.input-field input[type=text]:valid,
+.input-field input[type=email]:valid {
+  box-shadow: 0 1px 0 0 white;
+  border-bottom: 1px solid white;
+}
 
+.input-field input[type=text]:invalid
+.input-field input[type=email]:invalid {
+  box-shadow: 0 1px 0 0 red;
+  border-bottom: 1px solid red;
+}
 
+.input-field input[type=text]:focus
+.input-field input[type=email]:focus {
+  box-shadow: 0 1px 0 0 white;
+  border-bottom: 1px solid white;
+}
 
+.input-field label{
+  color: white;
+}
+.input-field input[type=text]:focus +label,
+.input-field input[type=email]:focus +label {
+  color: white;
+}
 
+.input-field input[type=text]:invalid +label,
+.input-field input[type=email]:invalid +label {
+  color: red;
+}
 
+.material-icons.white6 {
+  color: white;
+}
 
-
-
-
-
+i.material-icons.white6.prefix.active{
+	color: red;
+}
