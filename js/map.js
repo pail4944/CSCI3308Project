@@ -1,3 +1,12 @@
+/**
+ * Uses leaflet to create a map.
+ * @example 
+ * createmap('map', [80, 110], 12, Object)
+ * @param {HTMLElement} element - Where the map will be stored
+ * @param {int[]} position - coordinates where the map will be positioned [longitude, latitude]
+ * @param {int} zoom - initial zoom level of map 
+ * @param {Object} data - JSON object that makes markers on map
+ */
 function createmap(element, position, zoom, data){ 
 	var map = L.map(element).setView(position, zoom)
 	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {

@@ -1,3 +1,13 @@
+
+/**
+ * Creates a string of images 
+ *@example
+ * // returns 5 star image
+ * getstar(5)
+ *@param {int} rating - Valid inputs: 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 
+ *@returns {string} - Returns string of HTML image sources
+ */
+
 function getstar(rating){
       switch(rating) {
             case 0:
