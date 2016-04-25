@@ -58,8 +58,8 @@ version history: [location of file]
 body
 	{
 	background: url(/images/background.png) repeat;
-	background-color: #bdbdbd; /* Title surround color */
-	color: #000000;	
+	background-color: #bdbdbd; /* Page background color */
+	color: #000000;	/* Text color */
 	text-align:center;
 }
 
