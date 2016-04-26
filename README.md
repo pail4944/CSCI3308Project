@@ -9,9 +9,13 @@
 ##Repo Organization
 
 -Our root directory contains our main page, index.html, and our two other html pages, about.html and testing.html. 
+
 -All the Javascript files live in the js directory. 
+
 -The CSS files live in the css directory. 
+
 -The graphics we use on the site are stored in the assets directory. 
+
 -The auto-doc generation is contained in the doc directory.
 
 ##Description
