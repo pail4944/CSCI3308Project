@@ -58,8 +58,8 @@ version history: [location of file]
 body
 	{
 	background: url(/images/background.png) repeat;
-	background-color: #bdbdbd; /* Title surround color */
-	color: #000000;	
+	background-color: #bdbdbd; /* Page background color */
+	color: #000000;	/* Text color */
 	text-align:center;
 }
 
@@ -674,31 +674,6 @@ input[type="text"] {
 	}
 
 /* Materialize colors */
-
-.input-field input[type=text],
-.input-field input[type=email] {
-  border: none;
-  border-bottom: 1px solid white;
-  box-shadow: 0 1px 0 0 white;
-}
-
-.input-field input[type=text]:valid,
-.input-field input[type=email]:valid {
-  box-shadow: 0 1px 0 0 white;
-  border-bottom: 1px solid white;
-}
-
-.input-field input[type=text]:invalid
-.input-field input[type=email]:invalid {
-  box-shadow: 0 1px 0 0 red;
-  border-bottom: 1px solid red;
-}
-
-.input-field input[type=text]:focus
-.input-field input[type=email]:focus {
-  box-shadow: 0 1px 0 0 white;
-  border-bottom: 1px solid white;
-}
 
 .input-field label{
   color: white;
